@@ -1,0 +1,10 @@
+#root {
+  height: 100svh;
+  width: 100svw;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}

@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  --color-red: #FF3C13;
+  --color-light-red: #FF6A57;
+
+  --color-pink: #FF7A86;
+  --color-baby-pink: #FFE1DB; 
+
+  --color-yellow: #FFD100;
+  --color-light-yellow: #FFE1A8;
+
+  --color-teal: #43D7D2;
+  --color-light-teal: #B7F0ED;
+
+  --color-gray-1: #EEE7E3; 
+  --color-gray-2: #6B6063; 
+
+  --color-black: #1C1416;
+}
+
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: "carlmarx", sans-serif;
+  font-size: 5svh;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "carlmarx", sans-serif;
+  font-size: 3svh;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h3 {
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "ELGR" 1,
+    "ELSH" 2;
+}
+
+h1 .handwriting, h2 .handwriting {
+  font-family: "carlmarx-handwriting-regular", sans-serif;
+}
+
+.carlmarx {
+  font-family: "carlmarx", sans-serif;  
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100svh;
+  width: 100svw;
+}
+
+.corridor-bg-top {
+  background-image: url("/soft-wallpaper.png");
+  background-repeat: repeat;
+  background-size: 5svh 5svh;
+  background-position: center;
+  opacity: 0.9;
+
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.corridor-bg-bottom {
+  border-top: 0.1svh solid rgba(0, 0, 0, 0.2);
+  background: url("/batthern.png"), linear-gradient(to bottom, #F2E2BE 0%, #F2C8BE 45%, #F0A9A6 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: 8svh 8svh, cover;
+  background-position: top left;
+  box-shadow: 0 -1.2svh 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+
+.neon {
+  border: 0.6svh solid;
+  box-shadow: white inset 0 0 10px, white 0 0 10px;
+  background-color: transparent;
+  text-shadow: white 0 0 5px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* animations */
+.group:hover .handle-turn {
+  animation: handle-turn 0.3s ease-out forwards;
+  transform-origin: center right;
+}
+
+.group:hover .handle-rattle {
+  animation: handle-turn 0.1s ease-out infinite alternate;
+  transform-origin: center right;
+}
+
+.door-pulse {
+  animation: door-pulse 0.6s infinite ease-out;
+}
+
+@keyframes handle-turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes handle-rattle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes door-pulse {
+  0% {
+    transform: scale(0.98) rotate(0.5deg);
+    box-shadow: 0 0 10px white;
+  }
+  48% {
+    transform: scale(1.0) rotate(0deg);
+    box-shadow: 0 0 12px var(--color-baby-pink);
+  }
+  50% {
+    transform: scale(1.01) rotate(-0.5deg);
+    box-shadow: 0 0 15px var(--color-pink);
+  }
+  52% {
+    transform: scale(1.0) rotate(0deg);
+    box-shadow: 0 0 12px var(--color-baby-pink);
+  }
+  100% {
+    transform: scale(0.98) rotate(0.5deg);
+    box-shadow: 0 0 10px white;
+  }
+}
