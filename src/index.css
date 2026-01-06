@@ -84,7 +84,7 @@ body {
 }
 
 .corridor-bg-top {
-  background-image: url("/soft-wallpaper.png");
+  background-image: url("./assets/soft-wallpaper.png");
   background-repeat: repeat;
   background-size: 5svh 5svh;
   background-position: center;
@@ -95,7 +95,7 @@ body {
 
 .corridor-bg-bottom {
   border-top: 0.1svh solid rgba(0, 0, 0, 0.2);
-  background: url("/batthern.png"), linear-gradient(to bottom, #F2E2BE 0%, #F2C8BE 45%, #F0A9A6 100%);
+  background: url("./assets/batthern.png"), linear-gradient(to bottom, #F2E2BE 0%, #F2C8BE 45%, #F0A9A6 100%);
   background-repeat: repeat, no-repeat;
   background-size: 8svh 8svh, cover;
   background-position: top left;

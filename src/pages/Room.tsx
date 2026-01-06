@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AudioHandler, type BoothPreset } from "../audio/audioHandler";
+import movingGradient from '../assets/moving-gradient.svg';
+import movingGradientDark from '../assets/moving-gradient-dark.svg';
 
 type Phase = "IDLE" | "COUNTDOWN" | "LIVE" | "ENDED";
 
@@ -187,7 +189,7 @@ export default function Room() {
           <div className="relative flex-1 bg-white overflow-hidden">
             <img
               className="absolute inset-0 m-auto content-cover w-full h-full pointer-events-none"
-              src={open ? "/moving-gradient.svg" : "/moving-gradient-dark.svg"}
+              src={open ? movingGradient : movingGradientDark}
               alt="moving-gradient"
             />
             <div

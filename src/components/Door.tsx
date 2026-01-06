@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import movingGradient from '../assets/moving-gradient.svg';
+import movingGradientDark from '../assets/moving-gradient-dark.svg';
 type DoorProps = {
     number: number,
     open: boolean
@@ -24,7 +26,7 @@ export default function Door({ number, open }: DoorProps) {
                 }
                 <div className="relative w-[80%] h-[90%] bg-white">
                     <img className='absolute inset-0 m-auto content-cover w-full h-full'
-                        src={open ? '/moving-gradient.svg' : '/moving-gradient-dark.svg'} alt='moving-gradient'
+                        src={open ? movingGradient : movingGradientDark} alt='moving-gradient'
                     />
                     <div className='absolute w-full h-full z-[5] flex flex-col justify-center items-start
                      backdrop-blur-xl border-[1svh] border-white/30 p-[3svh] pt-0'>
